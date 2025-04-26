@@ -3,7 +3,7 @@ import MyContext from '../../Context/data/MyContext';
 import Layout from '../../Components/Layout/Layout';
 import Modal from '../../Components/modal/Modal';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteFromCart } from '../../Redux/cartSlice';
+import { deleteFromCart } from '../../Redux/CartSlice';
 import { toast } from 'react-toastify';
 import { addDoc, collection } from 'firebase/firestore';
 import { fireDB } from '../../Firebase/FirebaseConfig';
