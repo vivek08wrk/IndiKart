@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import MyContext from '../../Context/data/MyContext';
 import Layout from '../../Components/Layout/Layout';
-import Modal from '../../Components/modal/Modal';
+import Modal from '../../Components/Modal/Modal';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteFromCart } from '../../Redux/CartSlice';
 import { toast } from 'react-toastify';
