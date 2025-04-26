@@ -3,7 +3,7 @@ import Layout from '../../Components/Layout/Layout'
 import MyContext from '../../Context/data/MyContext';
 import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { doc, getDoc } from 'Firebase/firestore';
+import { doc, getDoc } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 import { addToCart } from '../../Redux/CartSlice';
 import { fireDB } from '../../Firebase/FirebaseConfig';
