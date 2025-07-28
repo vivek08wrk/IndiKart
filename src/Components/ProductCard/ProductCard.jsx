@@ -70,8 +70,8 @@ function ProductCard() {
                                     >
                                         <div className="flex justify-center">
                                             <img
-                                                // CHANGED: h-80 to h-60, added object-cover
-                                                className="rounded-2xl w-full h-60 p-2 hover:scale-110 transition-transform duration-300 ease-in-out object-cover"
+                                                // REVERTED: h-60 back to h-80, removed object-cover
+                                                className="rounded-2xl w-full h-80 p-2 hover:scale-110 transition-transform duration-300 ease-in-out"
                                                 src={imageUrl}
                                                 alt={title}
                                             />
