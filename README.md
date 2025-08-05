@@ -1,12 +1,71 @@
-# React + Vite
+# IndiKart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+IndiKart is an e-commerce web application built with React, Redux, and Firebase. It allows users to browse products, view detailed product information, and add items to a shopping cart.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Product Listing & Details:** Browse and view detailed information about products.
+- **Shopping Cart:** Add products to the cart and persist cart items using Redux and localStorage.
+- **Firebase Integration:** Uses Firebase Firestore for product data storage.
+- **User Notifications:** Provides feedback using React Toastify.
+- **Responsive UI:** Styled with Tailwind CSS for a modern look and feel.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, Redux, React Router, Tailwind CSS
+- **Backend:** Firebase Firestore
+- **State Management:** Redux Toolkit
+- **Notifications:** React Toastify
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed
+- Firebase project set up (with Firestore enabled)
+
+### Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/yourusername/IndiKart.git
+    cd IndiKart
+    ```
+
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+3. Configure Firebase:
+    - Create a `src/Firebase/FirebaseConfig.js` file with your Firebase configuration.
+
+4. Start the development server:
+    ```bash
+    npm run dev
+    ```
+
+5. Open [http://localhost:5173](http://localhost:5173) to view the app in your browser.
+
+## Project Structure
+
+```
+src/
+  Components/      # Reusable UI components
+  Context/         # React Context for global state
+  Pages/           # Page components (e.g., ProductInfo)
+  Redux/           # Redux slices and store
+  Firebase/        # Firebase configuration
+  App.js           # Main app component
+```
+
+## Usage
+
+- Browse products on the homepage.
+- Click on a product to view its details.
+- Add products to your cart.
+- Cart state is saved in localStorage.
+
+## Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import Filter from '../../Components/Filter/Filter'
-import ProductCard from '../../Components/ProductCard/ProductCard'
+// import ProductCard from '../../Components/ProductCard/ProductCard'
 import Layout from '../../Components/Layout/Layout'
 import MyContext from '../../Context/data/MyContext'
 import { useDispatch, useSelector } from 'react-redux'
@@ -8,8 +8,8 @@ import { addToCart } from '../../Redux/CartSlice'
 
 function AllProducts() {
   const context = useContext(MyContext)
-  const { mode, product ,searchkey, setSearchkey,filterType,setFilterType,
-      filterPrice,setFilterPrice} = context
+  const { mode, product ,searchkey, filterType,
+      filterPrice} = context
 
   const dispatch = useDispatch()
   const cartItems = useSelector((state)=> state.cart);
