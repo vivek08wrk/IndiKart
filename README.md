@@ -27,23 +27,27 @@ IndiKart is an e-commerce web application built with React, Redux, and Firebase.
 ### Installation
 
 1. Clone the repository:
-    ```bash
-    git clone https://github.com/yourusername/IndiKart.git
-    cd IndiKart
-    ```
+
+   ```bash
+   git clone https://github.com/yourusername/IndiKart.git
+   cd IndiKart
+   ```
 
 2. Install dependencies:
-    ```bash
-    npm install
-    ```
+
+   ```bash
+   npm install
+   ```
 
 3. Configure Firebase:
-    - Create a `src/Firebase/FirebaseConfig.js` file with your Firebase configuration.
+
+   - Create a `src/Firebase/FirebaseConfig.js` file with your Firebase configuration.
 
 4. Start the development server:
-    ```bash
-    npm run dev
-    ```
+
+   ```bash
+   npm run dev
+   ```
 
 5. Open [http://localhost:5173](http://localhost:5173) to view the app in your browser.
 
@@ -67,5 +71,3 @@ src/
 - Cart state is saved in localStorage.
 
 ## Contributing
-
-Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
