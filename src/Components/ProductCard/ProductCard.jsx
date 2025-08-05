@@ -18,9 +18,8 @@ function ProductCard() {
 
     const dispatch = useDispatch();
     const cartItems = useSelector((state) => state.cart);
-    const navigate = useNavigate(); // Keep this for better navigation
+    const navigate = useNavigate();
 
-    // Add to cart
     const addCart = (product) => {
         dispatch(addToCart(product));
         toast.success('Added to cart');
@@ -56,12 +55,13 @@ function ProductCard() {
 
                             return (
                                 <div
-                                    key={index} // Added key prop (from remote)
-                                    onClick={() => navigate(`/productinfo/${id}`)} // Using navigate (from remote, preferred)
-                                    className="p-4 md:w-1/4 drop-shadow-lg cursor-pointer" // Added cursor-pointer (from remote)
+                                    key={index}
+                                    onClick={() => navigate(`/productinfo/${id}`)}
+                                    className="p-4 md:w-1/4 drop-shadow-lg cursor-pointer"
                                 >
+                                    {/* Change 1: Make this a flex column */}
                                     <div
-                                        className="h-full border-2 hover:shadow-gray-100 hover:shadow-2xl transition-shadow duration-300 ease-in-out border-gray-200 border-opacity-60 rounded-2xl overflow-hidden"
+                                        className="h-full flex flex-col border-2 hover:shadow-gray-100 hover:shadow-2xl transition-shadow duration-300 ease-in-out border-gray-200 border-opacity-60 rounded-2xl overflow-hidden"
                                         style={{
                                             backgroundColor: mode === 'dark' ? 'rgb(46 49 55)' : '',
                                             color: mode === 'dark' ? 'white' : '',
@@ -69,12 +69,13 @@ function ProductCard() {
                                     >
                                         <div className="flex justify-center">
                                             <img
-                                                className="rounded-2xl w-full h-80 p-2 hover:scale-110 transition-transform duration-300 ease-in-out" // Added transition-transform (from remote)
+                                                className="rounded-2xl w-full h-80 p-2 hover:scale-110 transition-transform duration-300 ease-in-out"
                                                 src={imageUrl}
-                                                alt={title} // Using title for alt text (from remote, better for accessibility)
+                                                alt={title}
                                             />
                                         </div>
-                                        <div className="p-5 border-t-2">
+                                        {/* Change 2: Make this flex-grow to push button down */}
+                                        <div className="flex flex-col flex-grow p-5 border-t-2">
                                             <h2
                                                 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"
                                                 style={{
@@ -99,10 +100,11 @@ function ProductCard() {
                                             >
                                                 ₹ {price}
                                             </p>
-                                            <div className="flex justify-center">
+                                            {/* Change 3: mt-auto pushes this div to bottom */}
+                                            <div className="flex justify-center mt-auto">
                                                 <button
                                                     onClick={(e) => {
-                                                        e.stopPropagation(); // prevent card click
+                                                        e.stopPropagation();
                                                         addCart(item);
                                                     }}
                                                     type="button"
