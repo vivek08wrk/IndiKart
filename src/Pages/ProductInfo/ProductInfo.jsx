@@ -7,7 +7,7 @@ import { doc, getDoc } from 'firebase/firestore';
 import { toast } from 'react-toastify';
 import { addToCart } from '../../Redux/CartSlice';
 import { fireDB } from '../../Firebase/FirebaseConfig';
-
+import React from 'react';
 function ProductInfo() {
     const context = useContext(MyContext);
     const { loading, setLoading } = context;
