@@ -98,7 +98,7 @@ function ProductCard() {
                                                     color: mode === 'dark' ? 'white' : '',
                                                 }}
                                             >
-                                                ₹ {price}
+                                                ₹{price}
                                             </p>
                                             {/* Change 3: mt-auto pushes this div to bottom */}
                                             <div className="flex justify-center mt-auto">
